@@ -16,6 +16,22 @@
             margin-left: 38.141%;
             background-color: #15c701;
         }
+        #select_materials{
+            width: 30%;
+        }
+        @media(max-width: 540px){
+            #select_materials{
+                width: 40%;
+            }
+            .form-container {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .margin-auto{
+                margin-left: 25%;
+                background-color: #15c701;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,7 +144,7 @@
     <div id="container">
         <div id="list_materials" class="input-group mb-3">
     <!--        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>-->
-            <select class="btn btn-outline-secondary dropdown-toggle">
+            <select id="select_materials" class="btn btn-outline-secondary dropdown-toggle">
                 <option value="1">Песок карьерный</option>
                 <option value="2">Песок строительный</option>
                 <option value="3">ПГС (песчано-гравийная смесь)</option>
