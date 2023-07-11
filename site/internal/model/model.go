@@ -6,11 +6,12 @@ import (
 )
 
 type Note struct {
-	gorm.Model                // Adds some metadata fields to the table
-	ID              uuid.UUID `gorm:"type:uuid"` // Explicitly specify the type to be uuid
-	Material        string
-	Size            string
-	address         string
-	dateForDelivery string
-	phoneNumber     string
+	gorm.Model              // Adds some metadata fields to the table
+	ID            uuid.UUID `gorm:"type:uuid"` // Explicitly specify the type to be uuid
+	PhoneNumber   string
+	WhatMaterial1 string
+	Value1        string
+	Address       string
+	Date          string
+	Comment       string
 }

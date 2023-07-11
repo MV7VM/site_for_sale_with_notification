@@ -5,6 +5,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html/v2"
 	"site/database"
+	"site/internal/model"
 )
 
 func main() {
@@ -22,18 +23,16 @@ func main() {
 	})
 	app.Post("/", func(c *fiber.Ctx) error {
 
-		var body struct {
-			Message string
-		}
+		var body model.Note
 		if err := c.BodyParser(&body); err != nil {
 			fmt.Println("!!!")
 			return err
 
 		}
-		fmt.Println(body.Message)
+		fmt.Println(body.ID, body.WhatMaterial1, body.Value1, body.Address, body.Date, body.PhoneNumber, body.Comment)
 		return c.Render("index", fiber.Map{
-			"Title":   "Hello world" + body.Message,
-			"Message": body.Message,
+			"Title":   "Hello world" + body.WhatMaterial1,
+			"Message": body.Value1,
 		})
 	})
 	// Listen on PORT 300
