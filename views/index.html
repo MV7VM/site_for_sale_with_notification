@@ -42,7 +42,7 @@
 <form action="/" method="POST" class="form-container">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Ваш номер телефона</label>
-        <input class="form-control" id="exampleFormControlInput1" placeholder="+79999999999" name="message"/>
+        <input class="form-control" id="exampleFormControlInput1" placeholder="+79999999999" name="phoneNumber"/>
 <!--        <button type="submit">+</button>-->
     </div>
 
@@ -141,29 +141,26 @@
 
             container.appendChild(newDiv);
         }
-        function delInput(){
-            var container = document.getElementById("container");
-        }
     </script>
     <div id="container">
         <div id="list_materials" class="input-group mb-3">
     <!--        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>-->
-            <select id="select_materials" class="btn btn-outline-secondary dropdown-toggle" name="what_material_1">
-                <option value="1">Песок карьерный</option>
-                <option value="2">Песок строительный</option>
-                <option value="3">ПГС (песчано-гравийная смесь)</option>
-                <option value="4">Щебень природный</option>
-                <option value="5">Пескогрунт</option>
-                <option value="6">Грунт</option>
-                <option value="7">Супесь</option>
-                <option value="8">Суглинок</option>
-                <option value="9">Глина</option>
-                <option value="10">Булыжник</option>
-                <option value="11">Валун для ландшафта</option>
-                <option value="12">Ландшафтный камень</option>
-    <!--            <option><hr class="dropdown-divider"></option>-->
-            </select>
-            <input name="value_1" class="form-control" placeholder="Укажите объем" aria-label="Text input with dropdown button">
+                <select id="select_materials" class="btn btn-outline-secondary dropdown-toggle" name="whatMaterial1">
+                    <option value="1">Песок карьерный</option>
+                    <option value="2">Песок строительный</option>
+                    <option value="3">Гравий</option>
+                    <option value="4">ПГС (песчано-гравийная смесь)</option>
+                    <option value="5">Щебень природный</option>
+                    <option value="6">Пескогрунт</option>
+                    <option value="7">Грунт</option>
+                    <option value="8">Супесь</option>
+                    <option value="9">Суглинок</option>
+                    <option value="10">Глина</option>
+                    <option value="11">Булыжник</option>
+                    <option value="12">Валун для ландшафта</option>
+                    <option value="13">Ландшафтный камень</option>
+                </select>
+            <input name="value1" class="form-control" placeholder="Укажите объем" aria-label="Text input with dropdown button">
             <button type="button" class="btn btn-info" onclick="addInput()">+</button>
 <!--            <button type="button" class="btn btn-info" onclick="addInput()">+</button>-->
         </div>
@@ -173,18 +170,18 @@
 
     <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm2">Пункт назначения</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="г. Москва">
+        <input name="address" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="г. Москва">
     </div>
 
 <!--    Date -->
     <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm3">Удобная дата поставки</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="12.12.1212">
+        <input name="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="12.12.1212">
     </div>
 
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Комментарий к заказу</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     <button type="submit" class="btn btn-primary btn-lg margin-auto">Оставить заявку</button>
 </form>
