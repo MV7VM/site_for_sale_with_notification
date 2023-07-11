@@ -35,11 +35,15 @@
     </style>
 </head>
 <body>
-
-<form class="form-container">
+<h1>{{ .Title }}</h1>
+{{ if .Message }}
+<p>{{ .Message }}</p>
+{{ end }}
+<form action="/" method="POST" class="form-container">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Ваш номер телефона</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+79999999999">
+        <input class="form-control" id="exampleFormControlInput1" placeholder="+79999999999" name="message"/>
+<!--        <button type="submit">+</button>-->
     </div>
 
 <!--    list for material-->
@@ -144,22 +148,22 @@
     <div id="container">
         <div id="list_materials" class="input-group mb-3">
     <!--        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>-->
-            <select id="select_materials" class="btn btn-outline-secondary dropdown-toggle">
+            <select id="select_materials" class="btn btn-outline-secondary dropdown-toggle" name="what_material_1">
                 <option value="1">Песок карьерный</option>
                 <option value="2">Песок строительный</option>
                 <option value="3">ПГС (песчано-гравийная смесь)</option>
-                <option value="3">Щебень природный</option>
-                <option value="3">Пескогрунт</option>
-                <option value="3">Грунт</option>
-                <option value="3">Супесь</option>
-                <option value="3">Суглинок</option>
-                <option value="3">Глина</option>
-                <option value="3">Булыжник</option>
-                <option value="3">Валун для ландшафта</option>
-                <option value="3">Ландшафтный камень</option>
+                <option value="4">Щебень природный</option>
+                <option value="5">Пескогрунт</option>
+                <option value="6">Грунт</option>
+                <option value="7">Супесь</option>
+                <option value="8">Суглинок</option>
+                <option value="9">Глина</option>
+                <option value="10">Булыжник</option>
+                <option value="11">Валун для ландшафта</option>
+                <option value="12">Ландшафтный камень</option>
     <!--            <option><hr class="dropdown-divider"></option>-->
             </select>
-            <input type="text" class="form-control" placeholder="Укажите объем" aria-label="Text input with dropdown button">
+            <input name="value_1" class="form-control" placeholder="Укажите объем" aria-label="Text input with dropdown button">
             <button type="button" class="btn btn-info" onclick="addInput()">+</button>
 <!--            <button type="button" class="btn btn-info" onclick="addInput()">+</button>-->
         </div>
@@ -182,7 +186,7 @@
         <label for="exampleFormControlTextarea1" class="form-label">Комментарий к заказу</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
-    <button type="button" class="btn btn-primary btn-lg margin-auto">Оставить заявку</button>
+    <button type="submit" class="btn btn-primary btn-lg margin-auto">Оставить заявку</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

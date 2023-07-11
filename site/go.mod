@@ -29,4 +29,9 @@ require (
 	golang.org/x/text v0.9.0 // indirect
 	gorm.io/driver/postgres v1.5.2 // indirect
 	gorm.io/gorm v1.25.0 // indirect
+	github.com/andybalholm/brotli v1.0.5 // indirect
+    github.com/gofiber/fiber/v2 v2.47.0 // indirect
+    github.com/gofiber/template v1.8.2 // indirect
+    github.com/gofiber/template/html/v2 v2.0.5 // indirect
+    github.com/gofiber/utils v1.1.0 // indirect
 )
