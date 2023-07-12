@@ -6,6 +6,7 @@ import (
 	"github.com/gofiber/template/html/v2"
 	"site/database"
 	"site/internal/model"
+	"time"
 )
 
 func main() {
@@ -24,12 +25,19 @@ func main() {
 	app.Post("/", func(c *fiber.Ctx) error {
 
 		var body model.Note
+		var body1 model.NoteTask
 		if err := c.BodyParser(&body); err != nil {
 			fmt.Println("!!!")
 			return err
-
 		}
-		fmt.Println(body.ID, body.WhatMaterial1, body.Value1, body.Address, body.Date, body.PhoneNumber, body.Comment)
+		if err := c.BodyParser(&body1); err != nil {
+			fmt.Println("!!!")
+			return err
+		}
+		now := time.Now()
+		body1.TodayDate = now.Format("02.01.2006")
+		fmt.Println(body1.TodayDate)
+		fmt.Println(body.ID, body.WhatMaterial1, body.Value1, body.Address, body.Date, body.PhoneNumber, body.Comment, body1.TodayDate)
 		return c.Render("index", fiber.Map{
 			"Title":   "Hello world" + body.WhatMaterial1,
 			"Message": body.Value1,

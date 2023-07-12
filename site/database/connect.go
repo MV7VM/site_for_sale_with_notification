@@ -41,4 +41,9 @@ func ConnectDB() {
 		panic("failed to migrate database")
 	}
 	fmt.Println("Database Migrated")
+	err = DB.AutoMigrate(&model.NoteTask{})
+	if err != nil {
+		panic("failed to migrate database")
+	}
+	fmt.Println("Database Migrated")
 }
