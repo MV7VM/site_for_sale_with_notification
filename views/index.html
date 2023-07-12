@@ -16,11 +16,83 @@
             margin-left: 38.141%;
             background-color: #15c701;
         }
-        #select_materials{
+        #select_materials1{
+            width: 30%;
+        }
+        #select_materials2{
+            width: 30%;
+        }
+        #select_materials3{
+            width: 30%;
+        }
+        #select_materials4{
+            width: 30%;
+        }
+        #select_materials5{
+            width: 30%;
+        }
+        #select_materials6{
+            width: 30%;
+        }
+        #select_materials7{
+            width: 30%;
+        }
+        #select_materials8{
+            width: 30%;
+        }
+        #select_materials9{
+            width: 30%;
+        }
+        #select_materials10{
+            width: 30%;
+        }
+        #select_materials11{
+            width: 30%;
+        }
+        #select_materials12{
+            width: 30%;
+        }
+        #select_materials13{
             width: 30%;
         }
         @media(max-width: 540px){
-            #select_materials{
+            #select_materials1{
+                width: 40%;
+            }
+            #select_materials2{
+                width: 40%;
+            }
+            #select_materials3{
+                width: 40%;
+            }
+            #select_materials4{
+                width: 40%;
+            }
+            #select_materials5{
+                width: 40%;
+            }
+            #select_materials6{
+                width: 40%;
+            }
+            #select_materials7{
+                width: 40%;
+            }
+            #select_materials8{
+                width: 40%;
+            }
+            #select_materials9{
+                width: 40%;
+            }
+            #select_materials10{
+                width: 40%;
+            }
+            #select_materials11{
+                width: 40%;
+            }
+            #select_materials12{
+                width: 40%;
+            }
+            #select_materials13{
                 width: 40%;
             }
             .form-container {
@@ -48,11 +120,23 @@
 
 <!--    list for material-->
     <script>
-        let arr = [];
+        let arr_value = [];
+        let arr_material = [];
         let a=1;
+        function final_values() {
+            let arr_final = [];
+            for (let i=1;i<=a;i+=1){
+                if (document.getElementById(("select_materials"+i))) {
+                    if(document.getElementById(("input_materials" + i))) {
+                        arr_final.push(document.getElementById(("select_materials" + i)).value, document.getElementById(("input_materials" + i)).value);
+                    }
+                }
+            }
+            document.getElementById(("input_materials"+a)).value=arr_final;
+        }
+
         function addInput() {
-            arr=[]
-            arr.push(document.getElementById(("select_materials"+a)).value,document.getElementById(("input_materials"+a)).value)
+            // arr.push(document.getElementById(("select_materials"+a)).value,document.getElementById(("input_materials"+a)).value)
             a+=1
             var container = document.getElementById("container");
             var newDiv = document.createElement("div");
@@ -65,58 +149,59 @@
             select.id=("select_materials"+a);
 
             var option1 = document.createElement("option");
-            option1.value = "1 "+arr;
+            option1.value = "1";
             option1.innerHTML = "Песок карьерный";
             select.appendChild(option1);
 
             var option2 = document.createElement("option");
-            option2.value = "2 "+arr;
+
+            option2.value = "2";
             option2.innerHTML = "Песок строительный";
             select.appendChild(option2);
 
             var option3 = document.createElement("option");
-            option3.value = "3 "+arr;
+            option3.value = "3";
             option3.innerHTML = "Гравий";
             select.appendChild(option3);
 
             var option4 = document.createElement("option");
-            option4.value = "4 "+arr;
+            option4.value = "4";
             option4.innerHTML = "ПГС (песчано-гравийная смесь)";
             select.appendChild(option4);
             var option5 = document.createElement("option");
-            option5.value = "5 "+arr;
+            option5.value = "5";
             option5.innerHTML = "Щебень природный";
             select.appendChild(option5);
             var option6 = document.createElement("option");
-            option6.value = "6 "+arr;
+            option6.value = "6";
             option6.innerHTML = "Пескогрунт";
             select.appendChild(option6);
             var option7 = document.createElement("option");
-            option7.value = "7 "+arr;
+            option7.value = "7";
             option7.innerHTML = "Грунт";
             select.appendChild(option7);
             var option8 = document.createElement("option");
-            option8.value = "8 "+arr;
+            option8.value = "8";
             option8.innerHTML = "Супесь";
             select.appendChild(option8);
             var option9 = document.createElement("option");
-            option9.value = "9 "+arr;
+            option9.value = "9";
             option9.innerHTML = "Суглинок";
             select.appendChild(option9);
             var option10 = document.createElement("option");
-            option10.value = "10 "+arr;
+            option10.value = "10";
             option10.innerHTML = "Глина";
             select.appendChild(option10);
             var option11 = document.createElement("option");
-            option11.value = "11 "+arr;
+            option11.value = "11";
             option11.innerHTML = "Булыжник";
             select.appendChild(option11);
             var option12 = document.createElement("option");
-            option12.value = "12 "+arr;
+            option12.value = "12";
             option12.innerHTML = "Валун для ландшафта";
             select.appendChild(option12);
             var option13 = document.createElement("option");
-            option13.value = "13 "+arr;
+            option13.value = "13";
             option13.innerHTML = "Ландшафтный камень";
             select.appendChild(option13);
 
@@ -153,7 +238,7 @@
     <div id="container">
         <div id="list_materials" class="input-group mb-3">
     <!--        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>-->
-                <select id="select_materials1" class="btn btn-outline-secondary dropdown-toggle" name="whatMaterial1">
+                <select id="select_materials1" class="btn btn-outline-secondary dropdown-toggle select_materials" name="whatMaterial1">
                     <option value="1">Песок карьерный</option>
                     <option value="2">Песок строительный</option>
                     <option value="3">Гравий</option>
@@ -191,7 +276,7 @@
         <label for="exampleFormControlTextarea1" class="form-label">Комментарий к заказу</label>
         <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary btn-lg margin-auto">Оставить заявку</button>
+    <button type="submit" class="btn btn-primary btn-lg margin-auto" onclick="final_values()">Оставить заявку</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
