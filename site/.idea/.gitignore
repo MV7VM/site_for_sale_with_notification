@@ -7,3 +7,9 @@
 /dataSources/
 /dataSources.local.xml
 **/*.env
+*.env
+../.env
+/../.env
+/*.env/
+../*.env
+/../*.env
