@@ -40,7 +40,7 @@ func main() {
 		body.ID = uuid.New()
 		body1.ID = uuid.New()
 		fmt.Println(body1.TodayDate)
-		fmt.Println(body.ID, body.WhatMaterial1, body.Value1, body.Address, body.Date, body.PhoneNumber, body.Comment, body1.TodayDate)
+		fmt.Println(body.ID, body.WhatMaterial1, body.Value1, body.Address, body.Date, body.PhoneNumber, body.Name, body.Comment, body1.TodayDate)
 		err := database.DB.Create(&body).Error
 		if err != nil {
 			return c.Status(500).JSON(fiber.Map{"status": "error", "message": "Could not create note", "data": err})
