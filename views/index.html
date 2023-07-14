@@ -245,7 +245,7 @@
             right: auto;
             bottom: 0;
             left: 5%;
-            background-color: #e5e5e5;
+            background-color: rgb(255, 255, 255);
         }
 
 
@@ -267,13 +267,33 @@
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
+        .carousel-item-border{
+            border-radius: 2%;
+        }
+        .sety-border{
+            border-radius: 100%;
+        }
+        .background-image {
+            background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1613158167_148-p-zheltii-fon-s-poloskami-170.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+        .body-color{
+            background-color: rgb(33, 37, 41);
+        }
+        .text-color{
+            color: rgba(137,143,146,1.33);
+        }
+        .footer-height{
+            height: 20px;
+        }
     </style>
 
 
     <!-- Custom styles for this template -->
 <!--    <link href="../product/product.css" rel="stylesheet">-->
 </head>
-<body>
+<body class="body-color">
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="check2" viewBox="0 0 16 16">
@@ -306,45 +326,46 @@
     </symbol>
 </svg>
 
-<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
-    <div class="container">
-        <a class="navbar-brand d-md-none" href="#">
-            <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
-            Aperture
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="#offcanvas" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas" aria-labelledby="#offcanvasLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="#offcanvasLabel">Aperture</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav flex-grow-1 justify-content-between">
-                    <li class="nav-item"><a class="nav-link" href="#">
-                        <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
-                    </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">
-                        <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
-                    </a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+<!--<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">-->
+<!--    <div class="container">-->
+<!--        <a class="navbar-brand d-md-none" href="#">-->
+<!--            <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>-->
+<!--            Aperture-->
+<!--        </a>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="#offcanvas" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas" aria-labelledby="#offcanvasLabel">-->
+<!--            <div class="offcanvas-header">-->
+<!--                <h5 class="offcanvas-title" id="#offcanvasLabel">Aperture</h5>-->
+<!--                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+<!--            </div>-->
+<!--            <div class="offcanvas-body">-->
+<!--                <ul class="navbar-nav flex-grow-1 justify-content-between">-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">-->
+<!--                        <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>-->
+<!--                    </a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">Product</a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">Support</a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>-->
+<!--                    <li class="nav-item"><a class="nav-link" href="#">-->
+<!--                        <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>-->
+<!--                    </a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
 
 <main>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center background-image">
         <div class="col-md-6 p-lg-5 mx-auto my-5">
-            <h1 class="display-3 fw-bold">Продажа нерудных и строительных материалов!</h1>
-            <h3 class="fw-normal text-muted mb-3">С доставкой в Истре</h3>
+            <h1 class="display-3 fw-bold text-color">Продажа нерудных и строительных материалов!</h1>
+            <h3 class="text-color fw-normal mb-3 text-color">С доставкой в Истре</h3>
             <div class="d-flex gap-3 justify-content-center lead fw-normal">
                 <a class="icon-link" href="#section2">
                     Оставить заявку!
@@ -352,17 +373,18 @@
                 </a>
             </div>
         </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+<!--        <div class="product-device shadow-sm d-none d-md-block"></div>-->
+<!--        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>-->
     </div>
+
     <div id="section2" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
-        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden carousel">
+        <div class="body-color me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden carousel ">
             <div class="my-3 p-3">
                 <form action="/" method="POST" class="form-container">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Ваш номер телефона</label>
+                        <label for="exampleFormControlInput1" class="form-label text-color">Ваш номер телефона</label>
                         <input class="form-control" id="exampleFormControlInput1" placeholder="+79999999999" name="phoneNumber"/>
-                        <label for="exampleFormControlInput" class="form-label">Ваше имя</label>
+                        <label for="exampleFormControlInput" class="form-label text-color">Ваше имя</label>
                         <input class="form-control" id="exampleFormControlInput" placeholder="Иван" name="name"/>
                         <!--        <button type="submit">+</button>-->
                     </div>
@@ -512,12 +534,12 @@
 
                     <!--    Date -->
                     <div class="input-group input-group-sm mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-sm3">Удобная дата поставки</span>
+                        <span class="input-group-text" id="inputGroup-sizing-sm3 ">Удобная дата поставки</span>
                         <input name="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="12.12.1212">
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Комментарий к заказу</label>
+                        <label for="exampleFormControlTextarea1" class="form-label text-color">Комментарий к заказу</label>
                         <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg margin-auto" onclick="final_values()">Оставить заявку</button>
@@ -543,79 +565,79 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://krasnoyarsk-beton.ru/files/nodes/00d82784.jpg" class="d-block w-100" alt="...">
+                    <img src="https://krasnoyarsk-beton.ru/files/nodes/00d82784.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Песок карьерный</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Песок строительный</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Гравий</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>ПГС</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Щебень природный</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Пескогрунт</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Грунт</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Супесь</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Суглинок</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Глина</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Булыжник</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Валун для ландшафта</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100 carousel-item-border" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Ландшафтный камень</h5>
                     </div>
@@ -633,28 +655,25 @@
     </div>
 </main>
 
-<footer class="container py-5">
-    <div class="row">
-        <div class="col-12 col-md">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-            <small class="d-block mb-3 text-body-secondary">&copy; 2017–2023</small>
-        </div>
+<footer class="container py-5 text-color footer-height">
+    <div class="row footer-height">
+
         <div class="col-6 col-md">
-            <a class="navbar-brand" href="#">
-                <img src="https://pticainfo.ru/local/templates/ptica2019/images/telegram-logo50.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="http://t.me/MV777VM">
+                <img src="https://pticainfo.ru/local/templates/ptica2019/images/telegram-logo50.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top sety-border">
                 Телеграм
             </a>
         </div>
         <div class="col-6 col-md">
-            <a class="navbar-brand" href="#">
-                <img src="https://pticainfo.ru/local/templates/ptica2019/images/telegram-logo50.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="https://vk.com/mv777777vm">
+                <img src="https://sun6-23.userapi.com/s/v1/ig2/1MUh7ocdOOVUb4rFoX-bufgTv-70wng1q94B1658v_Zy36h-E9Ni5xiifL7U8rLqG1AMYgTIVue1zp5ZjKfX600p.jpg?size=50x50&quality=95&crop=71,82,576,576&ava=1" alt="Logo" width="30" height="24" class="d-inline-block align-text-top sety-border">
                 ВК
             </a>
         </div>
         <div class="col-6 col-md">
             <a class="navbar-brand" href="#">
-                <img src="https://pticainfo.ru/local/templates/ptica2019/images/telegram-logo50.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Инстаграм
+                <img src="https://ozmatrix.ru/sites/default/files/inline-images/whatsapp_ico.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top sety-border">
+                +7(999)999-99-99
             </a>
         </div>
     </div>
