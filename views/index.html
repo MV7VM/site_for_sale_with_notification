@@ -27,6 +27,7 @@
         .margin-auto{
             background-color: #15c701;
         }
+
         #select_materials1{
             width: 30%;
         }
@@ -260,7 +261,12 @@
                 flex: 1;
             }
         }
-
+        .carousel{
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
     </style>
 
 
@@ -337,15 +343,11 @@
 <main>
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
         <div class="col-md-6 p-lg-5 mx-auto my-5">
-            <h1 class="display-3 fw-bold">Designed for engineers</h1>
-            <h3 class="fw-normal text-muted mb-3">Build anything you want with Aperture</h3>
+            <h1 class="display-3 fw-bold">Продажа нерудных и строительных материалов!</h1>
+            <h3 class="fw-normal text-muted mb-3">С доставкой в Истре</h3>
             <div class="d-flex gap-3 justify-content-center lead fw-normal">
-                <a class="icon-link" href="#">
-                    Learn more
-                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-                </a>
-                <a class="icon-link" href="#">
-                    Buy
+                <a class="icon-link" href="#section2">
+                    Оставить заявку!
                     <svg class="bi"><use xlink:href="#chevron-right"/></svg>
                 </a>
             </div>
@@ -353,8 +355,8 @@
         <div class="product-device shadow-sm d-none d-md-block"></div>
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div id="section2" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 ">
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden carousel">
             <div class="my-3 p-3">
                 <form action="/" method="POST" class="form-container">
                     <div class="mb-3">
@@ -498,7 +500,7 @@
                                 <option value="12">Валун для ландшафта</option>
                                 <option value="13">Ландшафтный камень</option>
                             </select>
-                            <input id="input_materials1" name="value1" class="form-control" placeholder="Укажите объем" aria-label="Text input with dropdown button">
+                            <input id="input_materials1" name="value1" class="form-control" placeholder="Укажите объем в м3" aria-label="Text input with dropdown button">
                             <button type="button" class="btn btn-info" onclick="addInput()">+</button>
                             <!--            <button type="button" class="btn btn-info" onclick="addInput()">+</button>-->
                         </div>
@@ -523,12 +525,110 @@
             </div>
             <!--      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>-->
         </div>
-        <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">Another headline</h2>
-                <p class="lead">And an even wittier subheading.</p>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 3"></button>
             </div>
-            <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://krasnoyarsk-beton.ru/files/nodes/00d82784.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Песок карьерный</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Песок строительный</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Гравий</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ПГС</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Щебень природный</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Пескогрунт</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Грунт</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Супесь</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Суглинок</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Глина</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Булыжник</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Валун для ландшафта</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://st22.stpulscen.ru/images/product/093/567/710_original.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ландшафтный камень</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 </main>
@@ -540,42 +640,22 @@
             <small class="d-block mb-3 text-body-secondary">&copy; 2017–2023</small>
         </div>
         <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">
+                <img src="https://pticainfo.ru/local/templates/ptica2019/images/telegram-logo50.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Телеграм
+            </a>
         </div>
         <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">
+                <img src="https://pticainfo.ru/local/templates/ptica2019/images/telegram-logo50.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                ВК
+            </a>
         </div>
         <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
-            </ul>
-        </div>
-        <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">
+                <img src="https://pticainfo.ru/local/templates/ptica2019/images/telegram-logo50.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Инстаграм
+            </a>
         </div>
     </div>
 </footer>
