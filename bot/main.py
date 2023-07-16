@@ -14,7 +14,7 @@ import time
 api_key = "5171035316:AAEIwCPM1tDAdWaF0GFv0-cJXWSI_xloDiA"
 bot = Bot(token=api_key)
 dp = Dispatcher(bot)
-admin_id = 680553152
+admin_id = 680553152 #315537429
 database = db()
 dict_of_materials={
     "1": "Песок карьерный",
