@@ -1,199 +1,341 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-    <style>
-        .form-container {
-            width: 30%;
-            margin: 0 auto;
-        }
-        .margin-auto{
-            margin-left: 38.141%;
-            background-color: #15c701;
-        }
-        #select_materials{
-            width: 30%;
-        }
-        @media(max-width: 540px){
-            #select_materials{
-                width: 40%;
-            }
-            .form-container {
-                width: 90%;
-                margin: 0 auto;
-            }
-            .margin-auto{
-                margin-left: 25%;
-                background-color: #15c701;
-            }
-        }
-    </style>
+    <title>Заголовок страницы</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
-<body>
-<h1>{{ .Title }}</h1>
-{{ if .Message }}
-<p>{{ .Message }}</p>
-{{ end }}
-<form action="/" method="POST" class="form-container">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Ваш номер телефона</label>
-        <input class="form-control" id="exampleFormControlInput1" placeholder="+79999999999" name="phoneNumber"/>
-<!--        <button type="submit">+</button>-->
+<!--kbrf-->
+<body style="background-color: rgb(255, 253, 245);">
+<style>.image {
+    margin: auto;
+    background: #000;
+}
+.image img {
+    width: 100%;
+    opacity: 0.2;
+    background-size: cover;
+}
+
+.image-text1 {
+    width: 1200px;
+    line-height: 59px;
+    text-align: center;
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Roboto',Arial,sans-serif;
+    top: 170px;
+    left: 23%;
+    right: 50%;
+    margin-left: -170px;
+    color: white;
+    border-radius: 6px;
+}
+
+.image-text2 {
+    width: 1100px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    font-size: 21px;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-weight: 900;
+    top: 170px;
+    left: 17%;
+    right: 48%;
+    margin-left: -170px;
+    color: white;
+    border-radius: 6px;
+}
+
+.btn {
+    width: 220px;
+    height: 50px;
+}
+.marquee {
+    padding-top: 6px;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 40px;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+.track {
+    color: #000;
+    font-size: 21px;
+    font-family: 'Roboto',Arial,sans-serif;
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.price{
+    padding-top: 50px;
+    padding-bottom: 14px;
+    margin: auto;
+}
+
+.pricecalc{
+    padding-top: 110px;
+    padding-bottom: 1px;
+    margin: auto;
+}
+
+.t1{
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 42px;
+    line-height: 1.23;
+}
+
+.card-group{
+    width: 60%;
+    margin: auto;
+    background-color: rgb(255, 253, 245);
+    border-radius: 0%;
+}
+.form-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.btn-info{
+    width: 10%;
+    background-color: rgb(233, 159, 25);
+    color: white;
+}
+.btn-danger{
+    width: 10%;
+}
+
+.shadow{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);;
+}
+</style>
+<header>
+    <div class="image">
+        <img style="height: 690px; object-fit: cover;" src="https://s11.gifyu.com/images/SctAa.gif" alt="SctAa.gif"
+        >
+        <h1 class="image-text1">Доставка песка в Истре и области без посредников, напрямую с карьера
+            <span class="image-text2">Низкие цены от 600р за м³ за счёт: своего автопарка, современной логистической системы и отсутствия посредников. Заказ от 20 м³. Отгрузка точно по весам. Все виды и фракции песка. ГОСТ.
+              <p style=line-height:7;><a href="#container"><button type="button" class="btn btn-success">Оставить заявку</button></a>
+              </span>
+        </h1>
     </div>
-
-<!--    list for material-->
-    <script>
-        let arr = [];
-        let a=1;
-        function addInput() {
-            arr=[]
-            arr.push(document.getElementById(("select_materials"+a)).value,document.getElementById(("input_materials"+a)).value)
-            a+=1
-            var container = document.getElementById("container");
-            var newDiv = document.createElement("div");
-            newDiv.id = "list_materials";
-            newDiv.className = "input-group mb-3";
-
-            var select = document.createElement("select");
-            select.className = "btn btn-outline-secondary dropdown-toggle";
-            select.name = "whatMaterial1";
-            select.id=("select_materials"+a);
-
-            var option1 = document.createElement("option");
-            option1.value = "1 "+arr;
-            option1.innerHTML = "Песок карьерный";
-            select.appendChild(option1);
-
-            var option2 = document.createElement("option");
-            option2.value = "2 "+arr;
-            option2.innerHTML = "Песок строительный";
-            select.appendChild(option2);
-
-            var option3 = document.createElement("option");
-            option3.value = "3 "+arr;
-            option3.innerHTML = "Гравий";
-            select.appendChild(option3);
-
-            var option4 = document.createElement("option");
-            option4.value = "4 "+arr;
-            option4.innerHTML = "ПГС (песчано-гравийная смесь)";
-            select.appendChild(option4);
-            var option5 = document.createElement("option");
-            option5.value = "5 "+arr;
-            option5.innerHTML = "Щебень природный";
-            select.appendChild(option5);
-            var option6 = document.createElement("option");
-            option6.value = "6 "+arr;
-            option6.innerHTML = "Пескогрунт";
-            select.appendChild(option6);
-            var option7 = document.createElement("option");
-            option7.value = "7 "+arr;
-            option7.innerHTML = "Грунт";
-            select.appendChild(option7);
-            var option8 = document.createElement("option");
-            option8.value = "8 "+arr;
-            option8.innerHTML = "Супесь";
-            select.appendChild(option8);
-            var option9 = document.createElement("option");
-            option9.value = "9 "+arr;
-            option9.innerHTML = "Суглинок";
-            select.appendChild(option9);
-            var option10 = document.createElement("option");
-            option10.value = "10 "+arr;
-            option10.innerHTML = "Глина";
-            select.appendChild(option10);
-            var option11 = document.createElement("option");
-            option11.value = "11 "+arr;
-            option11.innerHTML = "Булыжник";
-            select.appendChild(option11);
-            var option12 = document.createElement("option");
-            option12.value = "12 "+arr;
-            option12.innerHTML = "Валун для ландшафта";
-            select.appendChild(option12);
-            var option13 = document.createElement("option");
-            option13.value = "13 "+arr;
-            option13.innerHTML = "Ландшафтный камень";
-            select.appendChild(option13);
-
-
-            var input = document.createElement("input");
-            input.id=("input_materials"+a);
-            input.name = "value1";
-            input.className = "form-control";
-            input.placeholder = "Укажите объем";
-            input.setAttribute("aria-label", "Text input with dropdown button");
-
-            var addButton = document.createElement("button");
-            addButton.type = "button";
-            addButton.className = "btn btn-info";
-            addButton.innerHTML = "+";
-            addButton.onclick = addInput;
-
-            var removeButton = document.createElement("button");
-            removeButton.type = "button";
-            removeButton.className = "btn btn-danger";
-            removeButton.innerHTML = "Удалить";
-            removeButton.onclick = function() {
-                container.removeChild(newDiv);
-                a-=1;
-            };
-
-            newDiv.appendChild(select);
-            newDiv.appendChild(input);
-            newDiv.appendChild(addButton);
-            newDiv.appendChild(removeButton);
-
-            container.appendChild(newDiv);
-        }
-    </script>
-    <div id="container">
-        <div id="list_materials" class="input-group mb-3">
-    <!--        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>-->
-                <select id="select_materials1" class="btn btn-outline-secondary dropdown-toggle" name="whatMaterial1">
-                    <option value="1">Песок карьерный</option>
-                    <option value="2">Песок строительный</option>
-                    <option value="3">Гравий</option>
-                    <option value="4">ПГС (песчано-гравийная смесь)</option>
-                    <option value="5">Щебень природный</option>
-                    <option value="6">Пескогрунт</option>
-                    <option value="7">Грунт</option>
-                    <option value="8">Супесь</option>
-                    <option value="9">Суглинок</option>
-                    <option value="10">Глина</option>
-                    <option value="11">Булыжник</option>
-                    <option value="12">Валун для ландшафта</option>
-                    <option value="13">Ландшафтный камень</option>
-                </select>
-            <input id="input_materials1" name="value1" class="form-control" placeholder="Укажите объем" aria-label="Text input with dropdown button">
-            <button type="button" class="btn btn-info" onclick="addInput()">+</button>
-<!--            <button type="button" class="btn btn-info" onclick="addInput()">+</button>-->
+</header>
+<div class="marquee">
+    <div class="track">
+        <div class="content">&nbsp;Песок карьерный |
+            Песок мытый |
+            Песок сеяный |
+            ПГС (песчано-гравийная смесь) |
+            Пескогрунт |
+            Щебень |
+            Суглинок |
+            Глина |
+            Гравий |
+            Песок карьерный |
+            Песок мытый |
+            Песок сеяный |
+            ПГС (песчано-гравийная смесь) |
+            Пескогрунт |
+            Щебень |
+            Суглинок |
+            Глина |
+            Гравий |</div>
+    </div>
+</div>
+<div class="price">
+    <h2 class="t1">Прайс-лист</h2>
+</div>
+<div class="card-group row row-cols-1 row-cols-md-5 g-4" style="width: 90%; margin: auto; background-color: rgb(255, 253, 245);" >
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Песок карьерный</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
         </div>
     </div>
-
-
-
-    <div class="input-group input-group-sm mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-sm2">Пункт назначения</span>
-        <input name="address" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="г. Москва">
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Песок строительный</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
     </div>
-
-<!--    Date -->
-    <div class="input-group input-group-sm mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-sm3">Удобная дата поставки</span>
-        <input name="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="12.12.1212">
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="https://static.tildacdn.com/tild3263-3165-4538-a230-636363656638/karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Гравий</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
     </div>
-
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Комментарий к заказу</label>
-        <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">песчано-гравийная смесь(ПГС)</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-lg margin-auto">Оставить заявку</button>
-</form>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Щебень природный</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Пескогрунт</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Грунт</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Супесь</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Суглинок</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Глина</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col" style="margin-left: 20%;">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Булыжник</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Валун для ландшафта</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="karier-pesok_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ландшафтный камень</h5>
+                <p class="card-text">Цена за тонну от ... руб. за м3 от ... руб.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pricecalc">
+    <h2 class="t1">Оставить заявку</h2>
+</div>
+<div class="my-3 p-3">
+    <form action="/" method="POST" class="form-container">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-color">Ваш номер телефона</label>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="+79999999999" name="phoneNumber"/>
+            <label for="exampleFormControlInput" class="form-label text-color">Ваше имя</label>
+            <input class="form-control" id="exampleFormControlInput" placeholder="Иван" name="name"/>
+            <!--        <button type="submit">+</button>-->
+        </div>
+        <div id="container">
+            <div id="list_materials" class="input-group mb-3" style="background-color: rgb(255, 255, 255);">
+                <!--        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>-->
+                <select id="select_materials1" class="btn btn-outline-secondary dropdown-toggle select_materials" name="whatMaterial1">
+                    <option value="1">Песок карьерный</option>
+                    <option value="2">Песок мытый</option>
+                    <option value="3">Песок сеяный</option>
+                    <option value="4">ПГС (песчано-гравийная смесь)</option>
+                    <option value="6">Пескогрунт</option>
+                    <option value="5">Щебень 5/20</option>
+                    <option value="7">Щебень 20/40</option>
+                    <option value="8">Щебень 40/70</option>
+                    <option value="9">Суглинок</option>
+                    <option value="10">Глина</option>
+                    <option value="11">Гравий 5/20</option>
+                    <option value="12">Гравий 20/40</option>
+                    <option value="13">Гравий 40/70</option>
+
+                </select>
+                <input id="input_materials1" name="value1" class="form-control" placeholder="Укажите объем в м3" aria-label="Text input with dropdown button">
+                <button type="button" style="background-color: rgb(233, 159, 25); color: white;" class="btn btn-info" onclick="addInput()">+</button>
+                <!--            <button type="button" class="btn btn-info" onclick="addInput()">+</button>-->
+            </div>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm2">Пункт назначения</span>
+            <input name="address" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="г. Москва">
+        </div>
+
+        <!--    Date -->
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm3 ">Удобная дата поставки</span>
+            <input name="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="12.12.1212">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-color">Комментарий к заказу</label>
+            <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" style="background-color: rgb(233, 159, 25);" class="btn btn-primary btn-lg margin-auto" onclick="final_values()">Оставить заявку</button>
+    </form>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
