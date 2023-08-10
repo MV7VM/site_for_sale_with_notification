@@ -63,7 +63,7 @@ async def print_hi(message: types.Message):
         while True:
             new_tasks=database.select_all()
             print(new_tasks)
-            if new_tasks:
+            if new_tasks :
                 for i in new_tasks:
                     await bot.send_message(admin_id, handler_of_massage(i))
                     database.del_row(i[0])
