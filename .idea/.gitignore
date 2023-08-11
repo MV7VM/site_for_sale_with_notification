@@ -7,3 +7,6 @@
 /dataSources/
 /dataSources.local.xml
 ../site/.env
+/inspectionProfiles/Project_Default.xml
+/site_for_sale_with_notification.iml
+/vcs.xml
