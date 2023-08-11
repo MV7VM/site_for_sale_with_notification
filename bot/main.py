@@ -2,7 +2,7 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-# 5171035316:AAEIwCPM1tDAdWaF0GFv0-cJXWSI_xloDiA
+# 5171035316:AAEIwCPM1tDAdWaF0GFv0-cJXWSI_xloDiA kill 38037
 import types
 
 from aiogram import Bot, Dispatcher, types
@@ -61,13 +61,16 @@ async def print_hi(message: types.Message):
     if message.chat.id == admin_id:
         print(1)
         while True:
-            new_tasks=database.select_all()
-            print(new_tasks)
-            if new_tasks :
-                for i in new_tasks:
-                    await bot.send_message(admin_id, handler_of_massage(i))
-                    database.del_row(i[0])
-            else:
+            try:
+                new_tasks=database.select_all()
+                print(new_tasks)
+                if new_tasks:
+                    for i in new_tasks:
+                        await bot.send_message(admin_id, handler_of_massage(i))
+                        database.del_row(i[0])
+                else:
+                    pass
+            except:
                 pass
             time.sleep(60)
 
