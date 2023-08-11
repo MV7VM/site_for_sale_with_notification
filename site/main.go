@@ -53,6 +53,7 @@ func main() {
 		})
 	})
 	// Listen on PORT 300
+	app.Static("/", "../views")
 	err := app.Listen(":3000")
 	if err != nil {
 		return
