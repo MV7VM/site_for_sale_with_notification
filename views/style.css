@@ -172,3 +172,10 @@
 .card-footer {
     background-color: rgb(255, 255, 255);
 }
+
+footer .cr-con{
+    background-color: #232127;
+    color: white;
+    padding: 1rem 4rem;
+    text-align: center;
+}
