@@ -34,32 +34,33 @@ function addInput() {
     var option2 = document.createElement("option");
 
     option2.value = "2";
-    option2.innerHTML = "Песок строительный";
+    option2.innerHTML = "Песок мытый";
     select.appendChild(option2);
 
     var option3 = document.createElement("option");
     option3.value = "3";
-    option3.innerHTML = "Гравий";
+    option3.innerHTML = "Песок сеяный";
     select.appendChild(option3);
+
     var option4 = document.createElement("option");
     option4.value = "4";
     option4.innerHTML = "ПГС (песчано-гравийная смесь)";
     select.appendChild(option4);
-    var option5 = document.createElement("option");
-    option5.value = "5";
-    option5.innerHTML = "Щебень природный";
-    select.appendChild(option5);
     var option6 = document.createElement("option");
     option6.value = "6";
     option6.innerHTML = "Пескогрунт";
     select.appendChild(option6);
+    var option5 = document.createElement("option");
+    option5.value = "5";
+    option5.innerHTML = "Щебень 5/20";
+    select.appendChild(option5);
     var option7 = document.createElement("option");
     option7.value = "7";
-    option7.innerHTML = "Грунт";
+    option7.innerHTML = "Щебень 20/40";
     select.appendChild(option7);
     var option8 = document.createElement("option");
     option8.value = "8";
-    option8.innerHTML = "Супесь";
+    option8.innerHTML = "Щебень 40/70";
     select.appendChild(option8);
     var option9 = document.createElement("option");
     option9.value = "9";
@@ -71,15 +72,15 @@ function addInput() {
     select.appendChild(option10);
     var option11 = document.createElement("option");
     option11.value = "11";
-    option11.innerHTML = "Булыжник";
+    option11.innerHTML = "Гравий 5/20";
     select.appendChild(option11);
     var option12 = document.createElement("option");
     option12.value = "12";
-    option12.innerHTML = "Валун для ландшафта";
+    option12.innerHTML = "Гравий 20/40";
     select.appendChild(option12);
     var option13 = document.createElement("option");
     option13.value = "13";
-    option13.innerHTML = "Ландшафтный камень";
+    option13.innerHTML = "Гравий 40/70";
     select.appendChild(option13);
 
 
@@ -87,7 +88,7 @@ function addInput() {
     input.id=("input_materials"+a);
     input.name = "value1";
     input.className = "form-control";
-    input.placeholder = "Укажите объем";
+    input.placeholder = "объем в м3";
     input.setAttribute("aria-label", "Text input with dropdown button");
 
     var addButton = document.createElement("button");
@@ -108,5 +109,6 @@ function addInput() {
     newDiv.appendChild(input);
     newDiv.appendChild(addButton);
     newDiv.appendChild(removeButton);
+
     container.appendChild(newDiv);
 }
