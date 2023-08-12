@@ -52,6 +52,7 @@ func main() {
 			"Message": body.Value1,
 		})
 	})
+	app.Static("/", "../views")
 	// Listen on PORT 300
 	err := app.Listen(":3000")
 	if err != nil {
