@@ -157,10 +157,11 @@
 .card-header {
     background-color: rgb(255, 255, 255);
 }
-.card-text {
+.card-text{
     font-family: 'Roboto',Arial,sans-serif;
     font-weight: 300;
-    font-size: 26px;
+    font-size: 20px;
+    color: #000000;
 }
 .text-body-secondary {
     font-family: 'Roboto',Arial,sans-serif;
