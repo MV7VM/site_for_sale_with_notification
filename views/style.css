@@ -117,9 +117,9 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);;
 }
 .card1{
+    padding-bottom: 60px;
     text-align: center;
     margin: auto;
-    height: 450px;
     width: 470px;
     border-radius: 5px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
@@ -138,8 +138,15 @@
     font-size: 18px;
     color: #000000;
 }
+.card-body1{
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+    padding-left: 18px;
+    padding-right: 20px;
+}
 .card-body{
-    display: block;
     padding-top: 60px;
     padding-left: 18px;
     padding-right: 20px;
@@ -149,6 +156,7 @@
     color: #ffffff;
     background-color: #e99f19;
     font-family: 'Roboto',Arial,sans-serif;
+    margin: auto;
     font-weight: 300;
     font-size: 20px;
     padding: 9px 20px;
@@ -179,3 +187,17 @@ footer .cr-con{
     padding: 1rem 4rem;
     text-align: center;
 }
+/*@media screen and (width: 1000px) {*/
+/*    .card-body1{*/
+/*        height: 40px;*/
+/*        display: flex;*/
+/*        justify-content: space-around;*/
+/*        padding-top: 60px;*/
+/*        padding-left: 18px;*/
+/*        padding-right: 20px;*/
+/*    }*/
+/*    html > body{*/
+/*        background-color: #0b5ed7;*/
+/*    }*/
+/*    body *{display: none;}*/
+/*}*/
